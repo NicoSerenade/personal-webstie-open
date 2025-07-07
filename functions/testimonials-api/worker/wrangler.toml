@@ -1,0 +1,24 @@
+name = "testimonials-api"
+main = "worker.js"
+compatibility_date = "2024-01-15"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "testimonials-db"
+database_id = ""
+
+# R2 Storage binding for photos
+[[r2_buckets]]
+binding = "testimonials_photos"
+bucket_name = "testimonials-photos"
+
+# KV Namespace for auth tokens
+[[kv_namespaces]]
+binding = "AUTH_TOKENS"
+id = "" 
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+# ADMIN_PASSWORD_HASH = "what are you looking for here?"

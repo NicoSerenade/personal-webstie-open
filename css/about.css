@@ -1,0 +1,368 @@
+/* ================================================== */
+/* ABOUT PAGE SPECIFIC STYLES */
+/* ================================================== */
+
+/* About Page Title */
+#about-me h1 {
+    margin-top: 5rem; 
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+#about-me h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--title-orange);
+    border-radius: 2px;
+}
+
+/* About Journey Container */
+.about-journey {
+    position: relative;
+}
+
+/* Journey Section Styling */
+.journey-section {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 60px;
+}
+
+.journey-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Section Numbers */
+.section-number {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--soft-orange);
+    border: 2px solid var(--title-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    color: var(--title-orange);
+    font-weight: 400;
+    z-index: 2;
+}
+
+/* Connecting line between sections */
+.about-journey .journey-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: calc(50% + 20px);
+    width: 2px;
+    height: calc(100% + 6rem);
+    background: linear-gradient(180deg, 
+        var(--title-orange) 0%, 
+        rgba(211, 84, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+/* Enhanced content styling for journey sections */
+.journey-section .column-content {
+    background: linear-gradient(135deg, var(--very-soft-orange) 0%, rgba(252, 240, 227, 0.6) 100%);
+    border-left: 3px solid rgba(211, 84, 0, 0.2);
+}
+
+.journey-section:nth-child(even) .column-content {
+    background: linear-gradient(135deg, var(--soft-pink) 0%, rgba(247, 240, 240, 0.6) 100%);
+    border-left-color: rgba(211, 84, 0, 0.15);
+}
+
+/* Subtle shadow variation */
+.journey-section .column-image img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================================== */
+/* BEYOND THE WORK SECTION */
+/* ================================================== */
+
+#beyond-the-work h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+#beyond-the-work h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--title-orange);
+    border-radius: 2px;
+}
+
+/* Beyond Intro Section */
+.beyond-intro {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.beyond-content-main {
+    background: linear-gradient(135deg, var(--very-soft-orange) 0%, rgba(252, 240, 227, 0.8) 100%);
+    border-left: 4px solid var(--title-orange);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.beyond-content-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--title-orange), rgba(211, 84, 0, 0.3));
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.beyond-text {
+    width: 100%;
+}
+
+.beyond-text p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Interests Container */
+.interests-container {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.interests-container::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--title-orange), transparent);
+}
+
+.interests-grid {
+    container-type: inline-size;
+}
+
+.interest-item {
+    background: linear-gradient(135deg, var(--soft-orange) 0%, rgba(252, 240, 227, 0.9) 100%);
+    border: 2px solid rgba(211, 84, 0, 0.1);
+    transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition), border-color var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--title-orange), rgba(211, 84, 0, 0.5));
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.interest-item:hover::before {
+    transform: translateX(0);
+}
+
+.interest-item:hover {
+    background: linear-gradient(135deg, var(--soft-orange-darker) 0%, rgba(247, 228, 215, 0.95) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(215, 84, 0, 0.15);
+    border-color: rgba(211, 84, 0, 0.2);
+}
+
+.interests-grid .interest-item {
+    --stagger-y: 0px;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    margin-top: 5rem;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--title-orange), transparent);
+}
+
+.video-content {
+    background: linear-gradient(135deg, var(--soft-pink) 0%, rgba(247, 240, 240, 0.8) 100%);
+    border-left: 4px solid var(--title-orange);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+}
+
+.video-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--title-orange), rgba(211, 84, 0, 0.3));
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.video-embed {
+    margin: 0 0 2rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #000;
+}
+
+.video-embed iframe,
+.video-embed video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+}
+
+.video-actions {
+    margin-top: 2rem;
+}
+
+/* ================================================== */
+/* RESPONSIVE GRID LAYOUTS FOR INTERESTS */
+/* ================================================== */
+
+/* 1 Card Layout for Interests */
+@container (max-width: 599px) {
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 2 Card Layout for Interests */
+@container (min-width: 600px) and (max-width: 899px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3 Card Layout and Stagger for Interests */
+@container (min-width: 900px) {
+    .interests-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .interests-grid .interest-item:nth-child(3n-2) { --stagger-y: 0px; }
+    .interests-grid .interest-item:nth-child(3n-1) { --stagger-y: 20px; }
+    .interests-grid .interest-item:nth-child(3n)   { --stagger-y: 40px; }
+}
+
+/* ================================================== */
+/* RESPONSIVE STYLES */
+/* ================================================== */
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .journey-section {
+        padding-left: 50px;
+        margin-bottom: 3rem;
+    }
+    
+    .section-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .about-journey .journey-section:not(:last-child)::after {
+        left: 16px;
+        height: calc(100% + 6rem);
+    }
+
+    .beyond-content-main,
+    .video-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .journey-section {
+        padding-left: 0;
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-number {
+        position: relative;
+        left: 0;
+        top: auto;
+        transform: none;
+        margin-bottom: 1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .about-journey .journey-section:not(:last-child)::after {
+        display: none;
+    }
+
+    .beyond-content-main,
+    .video-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .beyond-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    #about-me h1 {
+        margin-top: 3rem;
+    }
+
+    .beyond-content-main,
+    .video-content {
+        padding: 1rem;
+    }
+}

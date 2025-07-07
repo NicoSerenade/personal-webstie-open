@@ -1,0 +1,27 @@
+{
+  "name": "testimonials-api",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker API for testimonials management",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "db:init": "wrangler d1 execute testimonials-db --file=schema.sql",
+    "db:query": "wrangler d1 execute testimonials-db --command",
+    "db:backup": "wrangler d1 export testimonials-db --output=backup.sql"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "testimonials",
+    "api",
+    "d1",
+    "r2"
+  ],
+  "author": "Nicolás Castañeda",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.22.0"
+  }
+}
