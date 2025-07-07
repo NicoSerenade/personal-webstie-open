@@ -15,11 +15,12 @@ I believe in transparency, education, and that sharing knowledge accelerates col
 When you type `nicoserenade.com` in your browser, here's what happens:
 
 1. **Your browser asks**: "Where is this website?"
-2. **Cloudflare answers**: "Here are the files, and they're stored close to you"
-3. **Your browser downloads**: HTML, CSS, and JavaScript files
-4. **Your browser displays**: The website you see
+2. **Cloudflare responds**: "Here it is, served from a location near you"
+3. **Your browser downloads**: The frontend files of my website (The files that handle what you see.)
+4. **Your browser runs**: The downloaded files
+5. **Your browser displays**: The website you see
 
-### 💬 When You Do Something; Submit a Testimonial
+### 💬 When You Submit a Testimonial
 
 Here's the behind-the-scenes flow when someone adds a testimonial:
 
@@ -28,12 +29,10 @@ Here's the behind-the-scenes flow when someone adds a testimonial:
 3. **Data travels to Cloudflare Worker**: Your submission goes to a mini-program running at the edge
 4. **Worker processes**: 
    - Validates your data again (security first!)
-   - Saves your photo and testimonial in Cloudflare databases
+   - Sends your photo and testimonial to Cloudflare to save them
    - Marks it as "pending approval"
-5. **I review**: I can approve testimonials through an admin interface
-6. **Goes live**: Once approved, your testimonial automatically appears on the homepage
-
-This whole process happens in seconds and ensures quality while maintaining privacy.
+5. **I review**: I get notified and can approve testimonials through an admin interface
+6. **Goes live**: Once approved, your testimonial gets marked as "approved" and automatically appears on the homepage
 
 ### 🌐 What is Cloudflare?
 
@@ -83,6 +82,11 @@ These control colors, fonts, spacing, animations, and responsive design.
 
 These make the site interactive and dynamic.
 
+### 🔄 Key Systems
+- **Blog System**: Converts Markdown files to HTML pages with SEO optimization
+- **Testimonials**: Cloudflare D1 database with admin approval system
+- **Forms**: Web3Forms for contact, custom API for testimonials
+- **Responsive Design**: Works on desktop, tablet, and mobile
 
 ## 🔒 Security Note
 
